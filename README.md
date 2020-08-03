@@ -15,9 +15,9 @@ It is required to have the basic infrastructure up and running first ([MongoDB](
 
 **Todo Service Swagger: http://localhost:5000/docs**
 ----------------
-![Sardor-Karimboyev](https://https://github.com/Sardor-Karimboyev/Todo/blob/master/assets/todoService.png)
+![Sardor-Karimboyev](https://github.com/Sardor-Karimboyev/Todo/blob/master/assets/todoService.png)
 
 
 **Identity Service Swagger: http://localhost:5010/docs**
 ----------------
-![Sardor-Karimboyev](https://https://github.com/Sardor-Karimboyev/Todo/blob/master/assets/identityService.png)
+![Sardor-Karimboyev](https://github.com/Sardor-Karimboyev/Todo/blob/master/assets/identityService.png)
