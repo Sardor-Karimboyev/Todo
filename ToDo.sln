@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo.Common", "ToDo.Common\src\ToDo.Common\ToDo.Common.csproj", "{29756AB3-9FAC-45EB-8D13-F308CBD41DE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo.Common", "src\ToDo.Common\src\ToDo.Common\ToDo.Common.csproj", "{29756AB3-9FAC-45EB-8D13-F308CBD41DE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Services.Todo", "ToDo.Services.Todo\src\Todo.API\Todo.Services.Todo.csproj", "{89168711-B092-48EF-BC96-2E70AD5ED9DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Services.Todo", "src\ToDo.Services.Todo\src\Todo.API\Todo.Services.Todo.csproj", "{89168711-B092-48EF-BC96-2E70AD5ED9DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Services.Identity", "ToDo.Services.Identity\src\Todo.Services.Identity\Todo.Services.Identity.csproj", "{4E0FD040-0E9F-44F9-8DC0-372A21EC438E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Services.Identity", "src\ToDo.Services.Identity\src\Todo.Services.Identity\Todo.Services.Identity.csproj", "{4E0FD040-0E9F-44F9-8DC0-372A21EC438E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
