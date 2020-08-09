@@ -9,7 +9,11 @@ using System;
 using System.Reflection;
 using ToDo.Common.Dispatchers;
 using ToDo.Common.Mongo;
+using HostedServices = Microsoft.Extensions.Hosting;
 using ToDo.Common.Swagger;
+using Confluent.Kafka;
+using Todo.Services.Todo.Services;
+using ToDo.Common.Kafka;
 
 namespace Todo.API
 {
@@ -28,6 +32,10 @@ namespace Todo.API
         {
             services.AddControllers();
             services.AddSwaggerDocs();
+           
+            services.AddSingleton<HostedServices.IHostedService, ProcessTodosService>();
+            services.AddKafka();
+
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(Assembly.GetEntryAssembly())
                     .AsImplementedInterfaces();

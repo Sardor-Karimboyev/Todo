@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Confluent.Kafka;
+using System;
 using System.ComponentModel.DataAnnotations;
 using ToDo.Common.Types;
 
@@ -11,5 +12,6 @@ namespace Todo.API.Commands
         [Required]
         public string Title { get; set; }
         public DateTimeOffset? DueAt { get; set; }
+        public ProducerConfig Config { get; set; }
     }
 }

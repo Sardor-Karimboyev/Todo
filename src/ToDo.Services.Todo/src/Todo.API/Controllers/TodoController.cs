@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Confluent.Kafka;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -14,10 +15,12 @@ namespace Todo.API.Controllers
     [Authorize]
     public class TodoController : ControllerBase
     {
+        private readonly ProducerConfig _config;
         private readonly IDispatcher _dispatcher;
-        public TodoController(IDispatcher dispatcher)
+        public TodoController(IDispatcher dispatcher, ProducerConfig config)
         {
             _dispatcher = dispatcher;
+            _config = config;
         }
 
         // GET: api/Todo
@@ -44,7 +47,7 @@ namespace Todo.API.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
+            command.Config = _config;
             await _dispatcher.SendAsync(command);
 
             return Accepted();
